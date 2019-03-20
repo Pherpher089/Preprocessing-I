@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u,  center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -30,11 +30,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-//variables start header
-
-
 body {
 	line-height: 1;
+	font-size: 62.5%;
 }
 ol, ul {
 	list-style: none;
@@ -60,3 +58,82 @@ table {
 html, body {
     height: 100%;
 }
+
+//variables start header
+
+@containerWidth: 800px;
+@backGroundColor: darkGrey;
+@accentColor: grey;
+
+@topContMargin: 25px;
+@skills-size: 1.3rem;
+@standard-pSize: 1rem;
+@workHist-size: 1.5rem;
+
+//mixins
+
+.flexMix(@a, @b)
+{
+	display: flex;
+	align-content: @a;
+	justify-content:  @b;
+}
+
+//styles
+p{
+	font-size: @standard-pSize;
+}
+
+h3{
+	font-size: @workHist-size;
+}
+h4{
+	font-size: 1.8rem;
+}
+
+h1{ //name at top
+	font-size: 2rem; 
+}
+
+.container{
+	margin: 0 auto;
+  	width: @containerWidth;
+	.top-content{
+		margin-top: @topContMargin;
+		margin-bottom: @topContMargin;
+		.flexMix(center, space-between);
+		a{
+			padding: 25px;
+		}
+	}
+	.bottom-content{
+		.flexMix(center, space-around);
+		padding: 25px 0px 25px 0px;
+		background-color: grey;
+		margin-bottom: 25px;
+		.left{
+			
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+		}
+	}
+
+	.middle-content{
+		.flexMix(center, space-around);
+	}
+
+	.skills{
+		background: grey;
+		li{
+			font-size: @skills-size;
+		}
+	}
+
+	.contact{
+		margin-top: 30px;
+		.flexMix(center, space-around);
+	}
+}
+
+

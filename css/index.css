@@ -36,7 +36,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -105,6 +104,7 @@ section {
 }
 body {
   line-height: 1;
+  font-size: 62.5%;
 }
 ol,
 ul {
@@ -132,4 +132,60 @@ table {
 html,
 body {
   height: 100%;
+}
+p {
+  font-size: 1rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+h1 {
+  font-size: 2rem;
+}
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+.container .top-content {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.container .top-content a {
+  padding: 25px;
+}
+.container .bottom-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  padding: 25px 0px 25px 0px;
+  background-color: grey;
+  margin-bottom: 25px;
+}
+.container .bottom-content .left {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.container .middle-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+.container .skills {
+  background: grey;
+}
+.container .skills li {
+  font-size: 1.3rem;
+}
+.container .contact {
+  margin-top: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
 }
